@@ -13,7 +13,19 @@ namespace Apartado_de_Libros_proyecto_progra_III
 
         private void AddLibroForm1_Load(object sender, EventArgs e)
         {
+            // Carga los 5 géneros literarios en el ComboBox
+            GeneroLiterarioComboBox.Items.Clear();
+            GeneroLiterarioComboBox.Items.Add("Romance");
+            GeneroLiterarioComboBox.Items.Add("Suspenso/Terror");
+            GeneroLiterarioComboBox.Items.Add("Fantasía / Ciencia Ficción");
+            GeneroLiterarioComboBox.Items.Add("Distopia/Ficcion Contemporanea");
+            GeneroLiterarioComboBox.Items.Add("Novela Historica");
 
+            // Evita que el usuario escriba texto libre en el ComboBox
+            GeneroLiterarioComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+
+            // Inicializa la visualización de estrellas si existe el control
+            ActualizarEstrellas();
         }
 
         private void label9_Click(object sender, EventArgs e)
